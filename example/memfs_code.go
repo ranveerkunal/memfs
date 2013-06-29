@@ -1,18 +1,8 @@
-memfs
-=====
+// Copyright (c) 2013 The Go Authors. All rights reserved.
+// Copyright (c) 2013 memfs Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-Implementation of http.FileSystem where the files stay in memory.<br>
-It uses [<b>fsnotify</b>](https://github.com/howeyc/fsnotify) to keep the cache updated.
-
-Example:
-<pre><code>
-github.com/ranveerkunal/memfs $ go build example/memfs_code.go
-github.com/ranveerkunal/memfs $ ./memfs_code
-</code></pre>
-
-[http://localhost:9999/memfs](http://localhost:9999/memfs)
-
-```go
 package main
 
 import (
@@ -44,4 +34,3 @@ func main() {
 	log.Printf("path: %s addr:%s", *path, *addr)
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
-```
