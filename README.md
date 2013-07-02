@@ -77,6 +77,6 @@ BenchmarkNonExistentDiskFS-4      100000             16862 ns/op
 BenchmarkSmallFileMemFS-4           2000            811382 ns/op
 BenchmarkSmallFileDiskFS-4          2000            836498 ns/op
 BenchmarkBigFileMemFS-4                5        4629695200 ns/op
-BenchmarkBigFileDiskFS-4               1        11134569000 ns/op
+BenchmarkBigFileDiskFS-4               1       11134569000 ns/op
 ok      command-line-arguments  109.350s
 </pre>
