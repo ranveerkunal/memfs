@@ -47,7 +47,7 @@ func main() {
 ```
 <pre>
 Benchmark on mac: darwin 64
-~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
+~/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
 temp dir: /tmp/memfs406771321
 writing small file
 writing big file
@@ -65,7 +65,7 @@ ok      command-line-arguments  26.610s
 
 <pre>
 Benchmark on linux:
-~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
+~/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
 temp dir: /tmp/memfs945391658
 writing small file
 writing big file
