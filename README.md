@@ -66,17 +66,17 @@ ok      command-line-arguments  26.610s
 <pre>
 Benchmark on linux:
 ~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
-temp dir: /tmp/memfs016684973
+temp dir: /tmp/memfs945391658
 writing small file
 writing big file
 ready to benchmark ...
 testing: warning: no tests to run
 PASS
-BenchmarkNonExistentMemFS-4        50000             43828 ns/op
-BenchmarkNonExistentDiskFS-4       50000             37428 ns/op
-BenchmarkSmallFileMemFS-4           1000           1763882 ns/op
-BenchmarkSmallFileDiskFS-4          1000           1507493 ns/op
-BenchmarkBigFileMemFS-4                1        1550468000 ns/op
-BenchmarkBigFileDiskFS-4               1        1261333000 ns/op
-ok      command-line-arguments  63.824s
+BenchmarkNonExistentMemFS-4       500000              7918 ns/op
+BenchmarkNonExistentDiskFS-4      100000             16862 ns/op
+BenchmarkSmallFileMemFS-4           2000            811382 ns/op
+BenchmarkSmallFileDiskFS-4          2000            836498 ns/op
+BenchmarkBigFileMemFS-4                5        4629695200 ns/op
+BenchmarkBigFileDiskFS-4               1        11134569000 ns/op
+ok      command-line-arguments  109.350s
 </pre>
