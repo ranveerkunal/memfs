@@ -42,7 +42,7 @@ func createBigFile(name string) string {
 func createSmallFile(name string) string {
 	smallFile := name + "/small.txt"
 	fmt.Printf("writing small file\n")
-	cmd := exec.Command("dd", "if=/dev/urandom", "of=" + smallFile, "bs=2048", "count=10")
+	cmd := exec.Command("dd", "if=/dev/urandom", "of=" + smallFile, "bs=64", "count=10")
 	err := cmd.Run()
 	if err != nil {
 		log.Fatal(err)
