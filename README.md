@@ -55,6 +55,8 @@ testing: warning: no tests to run
 PASS
 BenchmarkNonExistentMemFS-4       500000              2779 ns/op
 BenchmarkNonExistentDiskFS-4      200000              7513 ns/op
+BenchmarkSmallFileMemFS-4          10000            129763 ns/op
+BenchmarkSmallFileDiskFS-4         10000            135561 ns/op
 BenchmarkBigFileMemFS-4               20          88782691 ns/op
 BenchmarkBigFileDiskFS-4              20          86461808 ns/op
 ok      command-line-arguments  20.301s
