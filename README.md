@@ -48,18 +48,19 @@ func main() {
 <pre>
 Benchmark on mac: darwin 64
 ~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
-temp dir: /tmp/memfs731592791
+temp dir: /tmp/memfs406771321
+writing small file
 writing big file
 ready to benchmark ...
 testing: warning: no tests to run
 PASS
-BenchmarkNonExistentMemFS-4       500000              2779 ns/op
-BenchmarkNonExistentDiskFS-4      200000              7513 ns/op
-BenchmarkSmallFileMemFS-4          10000            129763 ns/op
-BenchmarkSmallFileDiskFS-4         10000            135561 ns/op
-BenchmarkBigFileMemFS-4               20          88782691 ns/op
-BenchmarkBigFileDiskFS-4              20          86461808 ns/op
-ok      command-line-arguments  20.301s
+BenchmarkNonExistentMemFS-4      5000000               700 ns/op
+BenchmarkNonExistentDiskFS-4      500000              3996 ns/op
+BenchmarkSmallFileMemFS-4          10000            111634 ns/op
+BenchmarkSmallFileDiskFS-4         10000            128475 ns/op
+BenchmarkBigFileMemFS-4               20          83455262 ns/op
+BenchmarkBigFileDiskFS-4              20          96320175 ns/op
+ok      command-line-arguments  26.610s
 </pre>
 
 <pre>
