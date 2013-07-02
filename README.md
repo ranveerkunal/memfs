@@ -61,3 +61,21 @@ BenchmarkBigFileMemFS-4               20          88782691 ns/op
 BenchmarkBigFileDiskFS-4              20          86461808 ns/op
 ok      command-line-arguments  20.301s
 </pre>
+
+<pre>
+Benchmark on linux:
+~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
+temp dir: /tmp/memfs016684973
+writing small file
+writing big file
+ready to benchmark ...
+testing: warning: no tests to run
+PASS
+BenchmarkNonExistentMemFS-4        50000             43828 ns/op
+BenchmarkNonExistentDiskFS-4       50000             37428 ns/op
+BenchmarkSmallFileMemFS-4           1000           1763882 ns/op
+BenchmarkSmallFileDiskFS-4          1000           1507493 ns/op
+BenchmarkBigFileMemFS-4                1        1550468000 ns/op
+BenchmarkBigFileDiskFS-4               1        1261333000 ns/op
+ok      command-line-arguments  63.824s
+</pre>
