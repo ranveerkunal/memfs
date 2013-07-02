@@ -45,8 +45,7 @@ func main() {
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
 ```
-
-<code><pre>
+<pre>
 Benchmark on mac: darwin 64
 ~/gocode/src/github.com/ranveerkunal/memfs % go test memfs_test.go -bench=. -cpu=4 -parallel=4
 temp dir: /tmp/memfs731592791
@@ -59,4 +58,4 @@ BenchmarkNonExistentDiskFS-4      200000              7513 ns/op
 BenchmarkBigFileMemFS-4               20          88782691 ns/op
 BenchmarkBigFileDiskFS-4              20          86461808 ns/op
 ok      command-line-arguments  20.301s
-</pre></code>
+</pre>
