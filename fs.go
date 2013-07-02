@@ -40,9 +40,9 @@ func init() {
 }
 
 type memFileSystem struct {
-	root  string
-	cache map[string]*memFileInfo
-	lock  *sync.RWMutex
+	root    string
+	cache   map[string]*memFileInfo
+	lock    *sync.RWMutex
 	watcher *fsnotify.Watcher
 }
 
