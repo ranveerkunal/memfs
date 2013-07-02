@@ -48,8 +48,6 @@ type memFileSystem struct {
 
 func (fs *memFileSystem) Open(name string) (http.File, error) {
 	name = filepath.Join(fs.root, name)
-	name = path.Clean(name)
-	logger.Printf("Open: %s", name)
 
 	fs.lock.RLock()
 	fi, ok := fs.cache[name]
@@ -119,7 +117,6 @@ func (fs *memFileSystem) walk() error {
 }
 
 func (fs *memFileSystem) reloadFile(name string) os.FileInfo {
-	logger.Printf("Reload: name: %s", name)
 	fi, err := os.Stat(name)
 	if err != nil {
 		logger.Printf("failed to stat: %s with err: %v", name, err)
@@ -134,7 +131,6 @@ func (fs *memFileSystem) reloadFile(name string) os.FileInfo {
 }
 
 func (fs *memFileSystem) deleteFile(name string) os.FileInfo {
-	logger.Printf("Delete: name: %s", name)
 	fs.lock.RLock()
 	fi, ok := fs.cache[name]
 	fs.lock.RUnlock()

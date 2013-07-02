@@ -21,17 +21,14 @@ type memFile struct {
 }
 
 func (f *memFile) Close() error {
-	logger.Printf("Close: %s", f.fi.path)
 	return nil
 }
 
 func (f *memFile) Stat() (os.FileInfo, error) {
-	logger.Printf("Stat: %s", f.fi.path)
 	return f.fi, nil
 }
 
 func (f *memFile) Readdir(count int) ([]os.FileInfo, error) {
-	logger.Printf("Readdir: %s", f.fi.path)
 	infos := []os.FileInfo{}
 	prefix := f.fi.path
 	skip := 0
@@ -65,7 +62,6 @@ func (f *memFile) Readdir(count int) ([]os.FileInfo, error) {
 }
 
 func (f *memFile) Read(p []byte) (n int, err error) {
-	logger.Printf("Read: %s size:%d", f.fi.path, len(p))
 	if len(f.fi.content)-int(f.offset) >= len(p) {
 		n = len(p)
 	} else {
@@ -81,7 +77,6 @@ var errWhence = errors.New("Seek: invalid whence")
 var errOffset = errors.New("Seek: invalid offset")
 
 func (f *memFile) Seek(offset int64, whence int) (ret int64, err error) {
-	logger.Printf("Seek: %s offset: %d whence: %d", f.fi.path, offset, whence)
 	switch whence {
 	default:
 		return 0, errWhence

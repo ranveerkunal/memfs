@@ -91,13 +91,13 @@ func init() {
 
 func BenchmarkNonExistentMemFS(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		memFS.Open(fmt.Sprintf("./non_existent.%d", i))
+		memFS.Open("./non_existent.%d")
 	}
 }
 
 func BenchmarkNonExistentDiskFS(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		diskFS.Open(fmt.Sprintf("./non_existent.%d", i))
+		diskFS.Open("./non_existent.%d")
 	}
 }
 
