@@ -6,8 +6,8 @@ It uses [<b>fsnotify</b>](https://github.com/howeyc/fsnotify) to keep the cache 
 
 Example:
 <code><pre>
-github.com/ranveerkunal/memfs $ go build example/memfs_code.go
-github.com/ranveerkunal/memfs $ ./memfs_code
+github.com/ranveerkunal/memfs/example $ go build memfs_code.go
+github.com/ranveerkunal/memfs/example $ ./memfs_code
 </pre></code>
 
 [http://localhost:9999/memfs](http://localhost:9999/memfs)
